@@ -27,9 +27,9 @@ const Post = async ({ type }: { type?: "status" | "comment" }) => {
     });
   };
 
-  const fileDetails = await getFileDetails("68a69c085c7cd75eb858d63f");
+  // const fileDetails = await getFileDetails("68a69c085c7cd75eb858d63f");
 
-  console.log(fileDetails);
+  // console.log(fileDetails);
   return (
     <div className="p-4 border-y-[1px] border-borderGray">
       {/* Post type */}
@@ -96,9 +96,9 @@ const Post = async ({ type }: { type?: "status" | "comment" }) => {
               Nostrum, ab corporis.
             </p>
           </Link>
-          {/* <Image src="/general/post.jpeg" alt="" width={600} height={600} /> */}
+          <Image path="/general/post.jpeg" alt="" w={600} h={600} />
 
-          {fileDetails && fileDetails.fileType === "image" ? (
+          {/* {fileDetails && fileDetails.fileType === "image" ? (
             <Image
               path={fileDetails.filePath}
               alt=""
@@ -111,7 +111,7 @@ const Post = async ({ type }: { type?: "status" | "comment" }) => {
               path={fileDetails.filePath}
               className={fileDetails.customMetadata?.sensitive ? "blur-lg" : ""}
             />
-          )}
+          )} */}
 
           {type === "status" && (
             <span className="text-textGray">10:47 PM · August 18, 2025</span>
